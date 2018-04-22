@@ -12,9 +12,16 @@
 		AA200BB620898DCA00DEA455 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA200BB420898DCA00DEA455 /* Main.storyboard */; };
 		AA200BB820898DCC00DEA455 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA200BB720898DCC00DEA455 /* Assets.xcassets */; };
 		AA200BBB20898DCC00DEA455 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA200BB920898DCC00DEA455 /* LaunchScreen.storyboard */; };
+		AAA535BA208B2B4300C4A542 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA535B9208B2B4300C4A542 /* CollectionViewCell.swift */; };
+		AAC20ACE208A032A00A91969 /* MIKMIDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAC20ACD208A032A00A91969 /* MIKMIDI.framework */; };
+		AAEE58E02089918100D66664 /* examMIDI.mid in Resources */ = {isa = PBXBuildFile; fileRef = AAEE58DF2089918100D66664 /* examMIDI.mid */; };
+		C5B39A8042953A69413CD608 /* Pods_MidiPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93C9F5B45F4C6C478FD9E0A6 /* Pods_MidiPlayer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		43F17AB776267BB2BB999DBC /* Pods-MidiPlayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MidiPlayer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MidiPlayer/Pods-MidiPlayer.debug.xcconfig"; sourceTree = "<group>"; };
+		9291D127C7CC14B983E0AF2C /* Pods-MidiPlayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MidiPlayer.release.xcconfig"; path = "Pods/Target Support Files/Pods-MidiPlayer/Pods-MidiPlayer.release.xcconfig"; sourceTree = "<group>"; };
+		93C9F5B45F4C6C478FD9E0A6 /* Pods_MidiPlayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MidiPlayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA200BAD20898DCA00DEA455 /* MidiPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MidiPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA200BB020898DCA00DEA455 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA200BB220898DCA00DEA455 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +29,15 @@
 		AA200BB720898DCC00DEA455 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA200BBA20898DCC00DEA455 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AA200BBC20898DCC00DEA455 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AAA535B9208B2B4300C4A542 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		AAC20AC9208A031600A91969 /* Novocaine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Novocaine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAC20ACB208A031600A91969 /* NVDSP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = NVDSP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAC20ACD208A032A00A91969 /* MIKMIDI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MIKMIDI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAEE58DF2089918100D66664 /* examMIDI.mid */ = {isa = PBXFileReference; lastKnownFileType = audio.midi; path = examMIDI.mid; sourceTree = "<group>"; };
+		AAEE58E1208991E100D66664 /* MIKMIDI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MIKMIDI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAEE58E3208993C400D66664 /* Stratocaster Light Overdrive.SF2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Stratocaster Light Overdrive.SF2"; sourceTree = "<group>"; };
+		AAEE58E42089DA2500D66664 /* Novocaine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Novocaine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAEE58E62089DA2500D66664 /* NVDSP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = NVDSP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +45,44 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAC20ACE208A032A00A91969 /* MIKMIDI.framework in Frameworks */,
+				C5B39A8042953A69413CD608 /* Pods_MidiPlayer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6A7E836D4E2D423C8FCE78FD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AAC20ACD208A032A00A91969 /* MIKMIDI.framework */,
+				AAC20AC9208A031600A91969 /* Novocaine.framework */,
+				AAC20ACB208A031600A91969 /* NVDSP.framework */,
+				AAEE58E42089DA2500D66664 /* Novocaine.framework */,
+				AAEE58E62089DA2500D66664 /* NVDSP.framework */,
+				AAEE58E1208991E100D66664 /* MIKMIDI.framework */,
+				93C9F5B45F4C6C478FD9E0A6 /* Pods_MidiPlayer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A0CE886EF98D600D5B551170 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				43F17AB776267BB2BB999DBC /* Pods-MidiPlayer.debug.xcconfig */,
+				9291D127C7CC14B983E0AF2C /* Pods-MidiPlayer.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		AA200BA420898DCA00DEA455 = {
 			isa = PBXGroup;
 			children = (
 				AA200BAF20898DCA00DEA455 /* MidiPlayer */,
 				AA200BAE20898DCA00DEA455 /* Products */,
+				A0CE886EF98D600D5B551170 /* Pods */,
+				6A7E836D4E2D423C8FCE78FD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,9 +99,12 @@
 			children = (
 				AA200BB020898DCA00DEA455 /* AppDelegate.swift */,
 				AA200BB220898DCA00DEA455 /* ViewController.swift */,
+				AAA535B9208B2B4300C4A542 /* CollectionViewCell.swift */,
 				AA200BB420898DCA00DEA455 /* Main.storyboard */,
 				AA200BB720898DCC00DEA455 /* Assets.xcassets */,
 				AA200BB920898DCC00DEA455 /* LaunchScreen.storyboard */,
+				AAEE58DF2089918100D66664 /* examMIDI.mid */,
+				AAEE58E3208993C400D66664 /* Stratocaster Light Overdrive.SF2 */,
 				AA200BBC20898DCC00DEA455 /* Info.plist */,
 			);
 			path = MidiPlayer;
@@ -71,9 +117,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AA200BBF20898DCC00DEA455 /* Build configuration list for PBXNativeTarget "MidiPlayer" */;
 			buildPhases = (
+				CB182B4F60423C9EE2AC17C8 /* [CP] Check Pods Manifest.lock */,
 				AA200BA920898DCA00DEA455 /* Sources */,
 				AA200BAA20898DCA00DEA455 /* Frameworks */,
 				AA200BAB20898DCA00DEA455 /* Resources */,
+				D64D3EC4AE0815FB1E5556F9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -124,11 +172,51 @@
 			files = (
 				AA200BBB20898DCC00DEA455 /* LaunchScreen.storyboard in Resources */,
 				AA200BB820898DCC00DEA455 /* Assets.xcassets in Resources */,
+				AAEE58E02089918100D66664 /* examMIDI.mid in Resources */,
 				AA200BB620898DCA00DEA455 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CB182B4F60423C9EE2AC17C8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MidiPlayer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D64D3EC4AE0815FB1E5556F9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MidiPlayer/Pods-MidiPlayer-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/MIKMIDI/MIKMIDI.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MIKMIDI.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MidiPlayer/Pods-MidiPlayer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AA200BA920898DCA00DEA455 /* Sources */ = {
@@ -137,6 +225,7 @@
 			files = (
 				AA200BB320898DCA00DEA455 /* ViewController.swift in Sources */,
 				AA200BB120898DCA00DEA455 /* AppDelegate.swift in Sources */,
+				AAA535BA208B2B4300C4A542 /* CollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +367,7 @@
 		};
 		AA200BC020898DCC00DEA455 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 43F17AB776267BB2BB999DBC /* Pods-MidiPlayer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -289,6 +379,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.EthanLab.MidiPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -296,6 +388,7 @@
 		};
 		AA200BC120898DCC00DEA455 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9291D127C7CC14B983E0AF2C /* Pods-MidiPlayer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -307,6 +400,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.EthanLab.MidiPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
