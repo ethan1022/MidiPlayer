@@ -8,8 +8,7 @@
 
 import UIKit
 import MIKMIDI
-//import NVDSP
-//import Novocaine
+import AudioKit
 
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
@@ -20,9 +19,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     var longPressGesture: UILongPressGestureRecognizer!
     
     var collectionDataArray : Array<String> = ["Audio High Pass Filter" , "Audio Low Pass Filter"]
-    var midiSequence : MIKMIDISequence?
-    var midiSequencer : MIKMIDISequencer?
+    var midiSequencer : AKSequencer?
     var playTimer : Timer!
+    var isExporting : Bool = false
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,20 +52,30 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         self.collectionView.addGestureRecognizer(self.longPressGesture)
     }
     
-    func setupMIDIPlayer() {
-        if let midiPath = Bundle.main.path(forResource: "examMIDI", ofType: "mid"),
-            let midiData = NSData(contentsOfFile: midiPath) {
-            do {
-                self.midiSequence = try MIKMIDISequence.init(data: Data(referencing:midiData), error: ())
-                self.midiSequencer = MIKMIDISequencer.init(sequence: self.midiSequence!)
-                self.playTimeSlider.minimumValue = 0.0
-                self.playTimeSlider.maximumValue = Float(self.midiSequence!.length)
-                self.playTimeSlider.addTarget(self, action: #selector(changeMIDITimeStamp), for: UIControlEvents.valueChanged)
-            }
-            catch {
-                print(error.localizedDescription)
-            }
+    func convertFileWithUrl(_ url: URL) {
+        
+        if self.isExporting == true {
+            return
         }
+        self.isExporting = true
+        
+        
+    }
+    
+    func setupMIDIPlayer() {
+//        if let midiPath = Bundle.main.path(forResource: "examMIDI", ofType: "mid"),
+//            let midiData = NSData(contentsOfFile: midiPath) {
+//            do {
+//                self.midiSequence = try MIKMIDISequence.init(data: Data(referencing:midiData), error: ())
+//                self.midiSequencer = MIKMIDISequencer.init(sequence: self.midiSequence!)
+//                self.playTimeSlider.minimumValue = 0.0
+//                self.playTimeSlider.maximumValue = Float(self.midiSequence!.length)
+//                self.playTimeSlider.addTarget(self, action: #selector(changeMIDITimeStamp), for: UIControlEvents.valueChanged)
+//            }
+//            catch {
+//                print(error.localizedDescription)
+//            }
+//        }
     }
     
     
@@ -87,12 +98,22 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }
     }
     
+    func highPassFilterAction() {
+        let oscillator = AKOscillator(waveform: AKTable(.sawtooth))
+        let lowPassFilter = AKLowPassFilter.init(oscillator, cutoffFrequency: 22000.0, resonance: 0.2)
+        let envelope = AKAmplitudeEnvelope(lowPassFilter, attackDuration: 0.01, decayDuration: 0.1, sustainLevel: 1.0, releaseDuration: 0.1)
+        AudioKit.output = envelope
+        
+        
+        
+    }
+    
     //MARK: - Selector Methods
     @objc func timerAction() {
-        self.playTimeSlider.value = Float(self.midiSequencer!.currentTimeStamp)
-        if self.midiSequencer!.currentTimeStamp == self.midiSequence!.length {
+        self.playTimeSlider.value = Float(self.midiSequencer!.currentPosition.musicTimeStamp)
+        if self.midiSequencer!.currentPosition.musicTimeStamp == self.midiSequencer!.length.musicTimeStamp {
             self.midiSequencer!.stop()
-            self.midiSequencer!.startPlayback()
+            self.midiSequencer!.play()
         }
     }
     
@@ -100,10 +121,13 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         let value = self.playTimeSlider.value
         if self.midiSequencer!.isPlaying {
             self.midiSequencer!.stop()
-            self.midiSequencer!.startPlayback(atTimeStamp: MusicTimeStamp(value))
+            self.midiSequencer!.setTime(MusicTimeStamp(value))
+            self.midiSequencer!.play()
+//            self.midiSequencer!.startPlayback(atTimeStamp: MusicTimeStamp(value))
         }
         else {
-            self.midiSequencer!.currentTimeStamp = MusicTimeStamp(value)
+            self.midiSequencer!.setTime(MusicTimeStamp(value))
+//            self.midiSequencer!.currentTimeStamp = MusicTimeStamp(value)
         }
     }
     
@@ -131,7 +155,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             self.tapEffectWithButton(self.playButton, tapped: false)
         }
         else {
-            self.midiSequencer!.startPlayback(atTimeStamp: self.midiSequencer!.currentTimeStamp)
+            self.midiSequencer!.setTime(self.midiSequencer!.currentPosition.musicTimeStamp)
+//            self.midiSequencer!.startPlayback(atTimeStamp: self.midiSequencer!.currentTimeStamp)
             self.enablePlayTimer(true)
             self.tapEffectWithButton(self.playButton, tapped: true)
         }

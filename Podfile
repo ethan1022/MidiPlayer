@@ -7,6 +7,6 @@ target 'MidiPlayer' do
 
   # Pods for MidiPlayer
   pod 'MIKMIDI'
-  #pod 'NVDSP'
+  pod 'AudioKit', '~> 4.2'
 
 end
