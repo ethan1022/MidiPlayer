@@ -13,7 +13,7 @@
 		AA200BB820898DCC00DEA455 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA200BB720898DCC00DEA455 /* Assets.xcassets */; };
 		AA200BBB20898DCC00DEA455 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA200BB920898DCC00DEA455 /* LaunchScreen.storyboard */; };
 		AAA535BA208B2B4300C4A542 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA535B9208B2B4300C4A542 /* CollectionViewCell.swift */; };
-		AAE46F3E208DF1FF00EA7BC5 /* MIKMIDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAE46F3D208DF1FF00EA7BC5 /* MIKMIDI.framework */; };
+		AAE46F54208F21C600EA7BC5 /* Stratocaster Light Overdrive.SF2 in Resources */ = {isa = PBXBuildFile; fileRef = AAE46F53208F21C600EA7BC5 /* Stratocaster Light Overdrive.SF2 */; };
 		AAEE58E02089918100D66664 /* examMIDI.mid in Resources */ = {isa = PBXBuildFile; fileRef = AAEE58DF2089918100D66664 /* examMIDI.mid */; };
 		C5B39A8042953A69413CD608 /* Pods_MidiPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93C9F5B45F4C6C478FD9E0A6 /* Pods_MidiPlayer.framework */; };
 /* End PBXBuildFile section */
@@ -30,9 +30,8 @@
 		AA200BBA20898DCC00DEA455 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AA200BBC20898DCC00DEA455 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AAA535B9208B2B4300C4A542 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
-		AAE46F3D208DF1FF00EA7BC5 /* MIKMIDI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MIKMIDI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAE46F53208F21C600EA7BC5 /* Stratocaster Light Overdrive.SF2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Stratocaster Light Overdrive.SF2"; sourceTree = "<group>"; };
 		AAEE58DF2089918100D66664 /* examMIDI.mid */ = {isa = PBXFileReference; lastKnownFileType = audio.midi; path = examMIDI.mid; sourceTree = "<group>"; };
-		AAEE58E3208993C400D66664 /* Stratocaster Light Overdrive.SF2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Stratocaster Light Overdrive.SF2"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,7 +39,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AAE46F3E208DF1FF00EA7BC5 /* MIKMIDI.framework in Frameworks */,
 				C5B39A8042953A69413CD608 /* Pods_MidiPlayer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -51,7 +49,6 @@
 		6A7E836D4E2D423C8FCE78FD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				AAE46F3D208DF1FF00EA7BC5 /* MIKMIDI.framework */,
 				93C9F5B45F4C6C478FD9E0A6 /* Pods_MidiPlayer.framework */,
 			);
 			name = Frameworks;
@@ -94,7 +91,7 @@
 				AA200BB720898DCC00DEA455 /* Assets.xcassets */,
 				AA200BB920898DCC00DEA455 /* LaunchScreen.storyboard */,
 				AAEE58DF2089918100D66664 /* examMIDI.mid */,
-				AAEE58E3208993C400D66664 /* Stratocaster Light Overdrive.SF2 */,
+				AAE46F53208F21C600EA7BC5 /* Stratocaster Light Overdrive.SF2 */,
 				AA200BBC20898DCC00DEA455 /* Info.plist */,
 			);
 			path = MidiPlayer;
@@ -160,6 +157,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAE46F54208F21C600EA7BC5 /* Stratocaster Light Overdrive.SF2 in Resources */,
 				AA200BBB20898DCC00DEA455 /* LaunchScreen.storyboard in Resources */,
 				AA200BB820898DCC00DEA455 /* Assets.xcassets in Resources */,
 				AAEE58E02089918100D66664 /* examMIDI.mid in Resources */,
@@ -363,7 +361,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 87N724V2PB;
 				INFOPLIST_FILE = MidiPlayer/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.EthanLab.MidiPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
@@ -381,7 +382,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 87N724V2PB;
 				INFOPLIST_FILE = MidiPlayer/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.EthanLab.MidiPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
