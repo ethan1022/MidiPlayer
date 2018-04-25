@@ -6,7 +6,7 @@ target 'MidiPlayer' do
   use_frameworks!
 
   # Pods for MidiPlayer
-  pod 'MIKMIDI'
+  #pod 'MIKMIDI'
   pod 'AudioKit', '~> 4.2'
 
 end
