@@ -26,7 +26,7 @@ class AVAudioUnitMIDISynth: AVAudioUnitMIDIInstrument {
         super.init(audioComponentDescription: description)
         
         var bankURL = soundBankURL
-        
+        errno = 0
         let status = AudioUnitSetProperty(
             self.audioUnit,
             AudioUnitPropertyID(kMusicDeviceProperty_SoundBankURL),

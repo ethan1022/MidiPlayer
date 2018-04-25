@@ -29,7 +29,6 @@ class MIDIFileBouncer {
         
         self.engine = AVAudioEngine()
         self.sampler = try AVAudioUnitMIDISynth(soundBankURL: soundBankURL)
-        
         self.engine.attach(self.sampler)
         
         // We'll tap the sampler output directly for recording

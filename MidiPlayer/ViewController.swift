@@ -21,6 +21,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     var collectionDataArray : Array<String> = ["Audio High Pass Filter" , "Audio Low Pass Filter"]
     var midiPlayer : AVMIDIPlayer!
     var playTimer : Timer!
+    var destinationUrl : URL?
     
 //    let audioEngine = AVAudioEngine()
 //    var sampler : AVAudioUnitMIDISynth!
@@ -57,18 +58,14 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         self.collectionView.addGestureRecognizer(self.longPressGesture)
     }
     
-    func convertFileWithUrl(_ url: URL) {
-//        if self.isExporting == true {
-//            return
-//        }
-//        self.isExporting = true
+    func convertFileWithUrl() {
         
         
     }
     
     func setupMIDIPlayer() {
         if let midiURL = Bundle.main.url(forResource: "examMIDI", withExtension: "mid"),
-            let soundFontURL = Bundle.main.url(forResource: "Stratocaster Light Overdrive.SF2", withExtension: nil) {
+            let soundFontURL = Bundle.main.url(forResource: "StratocasterLightOverdrive.SF2", withExtension: nil) {
             do {
 //                self.sampler = try AVAudioUnitMIDISynth(soundBankURL: soundFontURL)
 //                self.audioEngine.attach(self.sampler)
@@ -138,19 +135,47 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 //        }
 //    }
 //
-//    func setSessionPlayback() {
-//        let audioSession = AVAudioSession.sharedInstance()
-//        do {
-//            try audioSession.setCategory(AVAudioSessionCategoryPlayback,
-//                                         with: AVAudioSessionCategoryOptions.mixWithOthers)
-//            try audioSession.setActive(true)
-//        } catch {
-//            print("couldn't set category \(error)")
-//        }
-//    }
+    func setSessionPlayback() {
+        let audioSession = AVAudioSession.sharedInstance()
+        do {
+            try audioSession.setCategory(AVAudioSessionCategoryPlayAndRecord,
+                                         with: AVAudioSessionCategoryOptions.mixWithOthers)
+            try audioSession.overrideOutputAudioPort(AVAudioSessionPortOverride.speaker)
+            try audioSession.setActive(true)
+        } catch {
+            print("couldn't set category \(error)")
+        }
+    }
     
     func highPassFilterAction() {
-        
+        if let midiURL = Bundle.main.url(forResource: "examMIDI", withExtension: "mid") {
+            let whiteNoise = AKWhiteNoise(amplitude: 0.1)
+            let filteredNoise = AKOperationEffect(whiteNoise) { whiteNoise, _ in
+                let halfPower = AKOperation.sineWave(frequency: 0.2).scale(minimum: 12_000, maximum: 100)
+                return whiteNoise.highPassFilter(halfPowerPoint: halfPower)
+            }
+            
+            do {
+                let file = try AKAudioFile(forReading: midiURL)
+                let player = try AKAudioPlayer(file: file)
+                player.looping = true
+                let filteredPlayer = AKOperationEffect(player) { player, _ in
+                    let halfPower = AKOperation.sineWave(frequency: 0.2).scale(minimum: 12_000, maximum: 100)
+                    return player.highPassFilter(halfPowerPoint: halfPower)
+                }
+                
+                let mixer = AKDryWetMixer(filteredNoise, filteredPlayer, balance: 0.5)
+                AudioKit.output = mixer
+                
+                self.setSessionPlayback()
+                try AudioKit.start()
+                whiteNoise.start()
+                player.play()
+            }
+            catch {
+                print(error.localizedDescription)
+            }
+        }
     }
     
     //MARK: - Selector Methods
@@ -236,6 +261,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         switch cell.label.text {
         case "Audio High Pass Filter":
             print("Audio High Pass Filter")
+            self.highPassFilterAction()
         case "Audio Low Pass Filter":
             print("Audio Low Pass Filter")
         default:
