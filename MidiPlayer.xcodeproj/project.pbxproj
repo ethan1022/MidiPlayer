@@ -14,6 +14,8 @@
 		AA200BBB20898DCC00DEA455 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA200BB920898DCC00DEA455 /* LaunchScreen.storyboard */; };
 		AAA535BA208B2B4300C4A542 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA535B9208B2B4300C4A542 /* CollectionViewCell.swift */; };
 		AAE46F54208F21C600EA7BC5 /* Stratocaster Light Overdrive.SF2 in Resources */ = {isa = PBXBuildFile; fileRef = AAE46F53208F21C600EA7BC5 /* Stratocaster Light Overdrive.SF2 */; };
+		AAE46F5C208F8F8800EA7BC5 /* AVAudioUnitMIDISynth.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE46F5B208F8F8800EA7BC5 /* AVAudioUnitMIDISynth.swift */; };
+		AAE46F5E208F938D00EA7BC5 /* MIDIFileBouncer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE46F5D208F938D00EA7BC5 /* MIDIFileBouncer.swift */; };
 		AAEE58E02089918100D66664 /* examMIDI.mid in Resources */ = {isa = PBXBuildFile; fileRef = AAEE58DF2089918100D66664 /* examMIDI.mid */; };
 		C5B39A8042953A69413CD608 /* Pods_MidiPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93C9F5B45F4C6C478FD9E0A6 /* Pods_MidiPlayer.framework */; };
 /* End PBXBuildFile section */
@@ -31,6 +33,8 @@
 		AA200BBC20898DCC00DEA455 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AAA535B9208B2B4300C4A542 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		AAE46F53208F21C600EA7BC5 /* Stratocaster Light Overdrive.SF2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Stratocaster Light Overdrive.SF2"; sourceTree = "<group>"; };
+		AAE46F5B208F8F8800EA7BC5 /* AVAudioUnitMIDISynth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVAudioUnitMIDISynth.swift; sourceTree = "<group>"; };
+		AAE46F5D208F938D00EA7BC5 /* MIDIFileBouncer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIDIFileBouncer.swift; sourceTree = "<group>"; };
 		AAEE58DF2089918100D66664 /* examMIDI.mid */ = {isa = PBXFileReference; lastKnownFileType = audio.midi; path = examMIDI.mid; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -87,6 +91,8 @@
 				AA200BB020898DCA00DEA455 /* AppDelegate.swift */,
 				AA200BB220898DCA00DEA455 /* ViewController.swift */,
 				AAA535B9208B2B4300C4A542 /* CollectionViewCell.swift */,
+				AAE46F5B208F8F8800EA7BC5 /* AVAudioUnitMIDISynth.swift */,
+				AAE46F5D208F938D00EA7BC5 /* MIDIFileBouncer.swift */,
 				AA200BB420898DCA00DEA455 /* Main.storyboard */,
 				AA200BB720898DCC00DEA455 /* Assets.xcassets */,
 				AA200BB920898DCC00DEA455 /* LaunchScreen.storyboard */,
@@ -213,7 +219,9 @@
 			files = (
 				AA200BB320898DCA00DEA455 /* ViewController.swift in Sources */,
 				AA200BB120898DCA00DEA455 /* AppDelegate.swift in Sources */,
+				AAE46F5E208F938D00EA7BC5 /* MIDIFileBouncer.swift in Sources */,
 				AAA535BA208B2B4300C4A542 /* CollectionViewCell.swift in Sources */,
+				AAE46F5C208F8F8800EA7BC5 /* AVAudioUnitMIDISynth.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

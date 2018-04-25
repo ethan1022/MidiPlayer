@@ -21,7 +21,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     var collectionDataArray : Array<String> = ["Audio High Pass Filter" , "Audio Low Pass Filter"]
     var midiPlayer : AVMIDIPlayer!
     var playTimer : Timer!
-//    var isExporting : Bool = false
+
     
     
     
@@ -52,21 +52,13 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         self.collectionView.addGestureRecognizer(self.longPressGesture)
     }
     
-    func convertFileWithUrl(_ url: URL) {
-//        if self.isExporting == true {
-//            return
-//        }
-//        self.isExporting = true
-        
-        
-    }
+
     
     func setupMIDIPlayer() {
         if let midiURL = Bundle.main.url(forResource: "examMIDI", withExtension: "mid"),
             let soundFontURL = Bundle.main.url(forResource: "Stratocaster Light Overdrive.SF2", withExtension: nil) {
             do {
-                let session = AVAudioSession.sharedInstance()
-                try session.setCategory(AVAudioSessionCategoryPlayback)
+
 
                 self.midiPlayer = try AVMIDIPlayer.init(contentsOf: midiURL, soundBankURL: soundFontURL)
                 self.midiPlayer.prepareToPlay()
@@ -76,6 +68,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 self.playTimeSlider.addTarget(self, action: #selector(changeMIDITimeStamp), for: UIControlEvents.valueChanged)
             }
             catch {
+                
                 print(error.localizedDescription)
                 
             }
@@ -102,12 +95,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }
     }
     
+
+    
     func highPassFilterAction() {
-//        let oscillator = AKOscillator(waveform: AKTable(.sawtooth))
-//        let lowPassFilter = AKLowPassFilter.init(oscillator, cutoffFrequency: 22000.0, resonance: 0.2)
-//        let envelope = AKAmplitudeEnvelope(lowPassFilter, attackDuration: 0.01, decayDuration: 0.1, sustainLevel: 1.0, releaseDuration: 0.1)
-//        AudioKit.output = envelope
-        
         
     }
     
@@ -172,6 +162,18 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         let sourceData = self.collectionDataArray[sourceIndexPath.row]
         self.collectionDataArray.remove(at: sourceIndexPath.row)
         self.collectionDataArray.insert(sourceData, at: destinationIndexPath.row)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath) as! CollectionViewCell
+        switch cell.label.text {
+        case "Audio High Pass Filter":
+            print("Audio High Pass Filter")
+        case "Audio Low Pass Filter":
+            print("Audio Low Pass Filter")
+        default:
+            print("default")
+        }
     }
     
     
