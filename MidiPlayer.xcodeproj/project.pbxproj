@@ -1,0 +1,430 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AA200BB120898DCA00DEA455 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA200BB020898DCA00DEA455 /* AppDelegate.swift */; };
+		AA200BB320898DCA00DEA455 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA200BB220898DCA00DEA455 /* ViewController.swift */; };
+		AA200BB620898DCA00DEA455 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA200BB420898DCA00DEA455 /* Main.storyboard */; };
+		AA200BB820898DCC00DEA455 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA200BB720898DCC00DEA455 /* Assets.xcassets */; };
+		AA200BBB20898DCC00DEA455 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA200BB920898DCC00DEA455 /* LaunchScreen.storyboard */; };
+		AAA535BA208B2B4300C4A542 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA535B9208B2B4300C4A542 /* CollectionViewCell.swift */; };
+		AAE46F54208F21C600EA7BC5 /* Stratocaster Light Overdrive.SF2 in Resources */ = {isa = PBXBuildFile; fileRef = AAE46F53208F21C600EA7BC5 /* Stratocaster Light Overdrive.SF2 */; };
+		AAE46F5C208F8F8800EA7BC5 /* AVAudioUnitMIDISynth.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE46F5B208F8F8800EA7BC5 /* AVAudioUnitMIDISynth.swift */; };
+		AAE46F5E208F938D00EA7BC5 /* MIDIFileBouncer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE46F5D208F938D00EA7BC5 /* MIDIFileBouncer.swift */; };
+		AAEE58E02089918100D66664 /* examMIDI.mid in Resources */ = {isa = PBXBuildFile; fileRef = AAEE58DF2089918100D66664 /* examMIDI.mid */; };
+		C5B39A8042953A69413CD608 /* Pods_MidiPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93C9F5B45F4C6C478FD9E0A6 /* Pods_MidiPlayer.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		43F17AB776267BB2BB999DBC /* Pods-MidiPlayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MidiPlayer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MidiPlayer/Pods-MidiPlayer.debug.xcconfig"; sourceTree = "<group>"; };
+		9291D127C7CC14B983E0AF2C /* Pods-MidiPlayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MidiPlayer.release.xcconfig"; path = "Pods/Target Support Files/Pods-MidiPlayer/Pods-MidiPlayer.release.xcconfig"; sourceTree = "<group>"; };
+		93C9F5B45F4C6C478FD9E0A6 /* Pods_MidiPlayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MidiPlayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA200BAD20898DCA00DEA455 /* MidiPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MidiPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA200BB020898DCA00DEA455 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AA200BB220898DCA00DEA455 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AA200BB520898DCA00DEA455 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AA200BB720898DCC00DEA455 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AA200BBA20898DCC00DEA455 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AA200BBC20898DCC00DEA455 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AAA535B9208B2B4300C4A542 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		AAE46F53208F21C600EA7BC5 /* Stratocaster Light Overdrive.SF2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Stratocaster Light Overdrive.SF2"; sourceTree = "<group>"; };
+		AAE46F5B208F8F8800EA7BC5 /* AVAudioUnitMIDISynth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVAudioUnitMIDISynth.swift; sourceTree = "<group>"; };
+		AAE46F5D208F938D00EA7BC5 /* MIDIFileBouncer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIDIFileBouncer.swift; sourceTree = "<group>"; };
+		AAEE58DF2089918100D66664 /* examMIDI.mid */ = {isa = PBXFileReference; lastKnownFileType = audio.midi; path = examMIDI.mid; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AA200BAA20898DCA00DEA455 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5B39A8042953A69413CD608 /* Pods_MidiPlayer.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6A7E836D4E2D423C8FCE78FD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				93C9F5B45F4C6C478FD9E0A6 /* Pods_MidiPlayer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A0CE886EF98D600D5B551170 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				43F17AB776267BB2BB999DBC /* Pods-MidiPlayer.debug.xcconfig */,
+				9291D127C7CC14B983E0AF2C /* Pods-MidiPlayer.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AA200BA420898DCA00DEA455 = {
+			isa = PBXGroup;
+			children = (
+				AA200BAF20898DCA00DEA455 /* MidiPlayer */,
+				AA200BAE20898DCA00DEA455 /* Products */,
+				A0CE886EF98D600D5B551170 /* Pods */,
+				6A7E836D4E2D423C8FCE78FD /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		AA200BAE20898DCA00DEA455 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AA200BAD20898DCA00DEA455 /* MidiPlayer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AA200BAF20898DCA00DEA455 /* MidiPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				AA200BB020898DCA00DEA455 /* AppDelegate.swift */,
+				AA200BB220898DCA00DEA455 /* ViewController.swift */,
+				AAA535B9208B2B4300C4A542 /* CollectionViewCell.swift */,
+				AAE46F5B208F8F8800EA7BC5 /* AVAudioUnitMIDISynth.swift */,
+				AAE46F5D208F938D00EA7BC5 /* MIDIFileBouncer.swift */,
+				AA200BB420898DCA00DEA455 /* Main.storyboard */,
+				AA200BB720898DCC00DEA455 /* Assets.xcassets */,
+				AA200BB920898DCC00DEA455 /* LaunchScreen.storyboard */,
+				AAEE58DF2089918100D66664 /* examMIDI.mid */,
+				AAE46F53208F21C600EA7BC5 /* Stratocaster Light Overdrive.SF2 */,
+				AA200BBC20898DCC00DEA455 /* Info.plist */,
+			);
+			path = MidiPlayer;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AA200BAC20898DCA00DEA455 /* MidiPlayer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA200BBF20898DCC00DEA455 /* Build configuration list for PBXNativeTarget "MidiPlayer" */;
+			buildPhases = (
+				CB182B4F60423C9EE2AC17C8 /* [CP] Check Pods Manifest.lock */,
+				AA200BA920898DCA00DEA455 /* Sources */,
+				AA200BAA20898DCA00DEA455 /* Frameworks */,
+				AA200BAB20898DCA00DEA455 /* Resources */,
+				58806AC806F804D64E54C211 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MidiPlayer;
+			productName = MidiPlayer;
+			productReference = AA200BAD20898DCA00DEA455 /* MidiPlayer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AA200BA520898DCA00DEA455 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = EthanLab;
+				TargetAttributes = {
+					AA200BAC20898DCA00DEA455 = {
+						CreatedOnToolsVersion = 9.3;
+					};
+				};
+			};
+			buildConfigurationList = AA200BA820898DCA00DEA455 /* Build configuration list for PBXProject "MidiPlayer" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AA200BA420898DCA00DEA455;
+			productRefGroup = AA200BAE20898DCA00DEA455 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AA200BAC20898DCA00DEA455 /* MidiPlayer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AA200BAB20898DCA00DEA455 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAE46F54208F21C600EA7BC5 /* Stratocaster Light Overdrive.SF2 in Resources */,
+				AA200BBB20898DCC00DEA455 /* LaunchScreen.storyboard in Resources */,
+				AA200BB820898DCC00DEA455 /* Assets.xcassets in Resources */,
+				AAEE58E02089918100D66664 /* examMIDI.mid in Resources */,
+				AA200BB620898DCA00DEA455 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		58806AC806F804D64E54C211 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MidiPlayer/Pods-MidiPlayer-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/MIKMIDI/MIKMIDI.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MIKMIDI.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MidiPlayer/Pods-MidiPlayer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CB182B4F60423C9EE2AC17C8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MidiPlayer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AA200BA920898DCA00DEA455 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA200BB320898DCA00DEA455 /* ViewController.swift in Sources */,
+				AA200BB120898DCA00DEA455 /* AppDelegate.swift in Sources */,
+				AAE46F5E208F938D00EA7BC5 /* MIDIFileBouncer.swift in Sources */,
+				AAA535BA208B2B4300C4A542 /* CollectionViewCell.swift in Sources */,
+				AAE46F5C208F8F8800EA7BC5 /* AVAudioUnitMIDISynth.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		AA200BB420898DCA00DEA455 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AA200BB520898DCA00DEA455 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AA200BB920898DCC00DEA455 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AA200BBA20898DCC00DEA455 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AA200BBD20898DCC00DEA455 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AA200BBE20898DCC00DEA455 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AA200BC020898DCC00DEA455 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 43F17AB776267BB2BB999DBC /* Pods-MidiPlayer.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 87N724V2PB;
+				INFOPLIST_FILE = MidiPlayer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.EthanLab.MidiPlayer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AA200BC120898DCC00DEA455 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9291D127C7CC14B983E0AF2C /* Pods-MidiPlayer.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 87N724V2PB;
+				INFOPLIST_FILE = MidiPlayer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.EthanLab.MidiPlayer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AA200BA820898DCA00DEA455 /* Build configuration list for PBXProject "MidiPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA200BBD20898DCC00DEA455 /* Debug */,
+				AA200BBE20898DCC00DEA455 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AA200BBF20898DCC00DEA455 /* Build configuration list for PBXNativeTarget "MidiPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA200BC020898DCC00DEA455 /* Debug */,
+				AA200BC120898DCC00DEA455 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AA200BA520898DCA00DEA455 /* Project object */;
+}
