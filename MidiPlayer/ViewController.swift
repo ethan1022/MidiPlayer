@@ -21,7 +21,12 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     var collectionDataArray : Array<String> = ["Audio High Pass Filter" , "Audio Low Pass Filter"]
     var midiPlayer : AVMIDIPlayer!
     var playTimer : Timer!
-
+    
+//    let audioEngine = AVAudioEngine()
+//    var sampler : AVAudioUnitMIDISynth!
+//    let mixer = AVAudioMixerNode()
+//    var sequencer : AVAudioSequencer!
+//    var isExporting : Bool = false
     
     
     
@@ -52,13 +57,35 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         self.collectionView.addGestureRecognizer(self.longPressGesture)
     }
     
-
+    func convertFileWithUrl(_ url: URL) {
+//        if self.isExporting == true {
+//            return
+//        }
+//        self.isExporting = true
+        
+        
+    }
     
     func setupMIDIPlayer() {
         if let midiURL = Bundle.main.url(forResource: "examMIDI", withExtension: "mid"),
             let soundFontURL = Bundle.main.url(forResource: "Stratocaster Light Overdrive.SF2", withExtension: nil) {
             do {
-
+//                self.sampler = try AVAudioUnitMIDISynth(soundBankURL: soundFontURL)
+//                self.audioEngine.attach(self.sampler)
+//                let audioFormat = AVAudioFormat(standardFormatWithSampleRate: 44100, channels: 2)
+//                let mixer = self.audioEngine.mainMixerNode
+//                mixer.outputVolume = 1.0
+//                self.audioEngine.connect(self.sampler, to: mixer, format: audioFormat)
+//                self.sequencer = AVAudioSequencer(audioEngine: self.audioEngine)
+//                try self.sequencer.load(from: try Data.init(contentsOf: midiURL), options: [])
+                
+//                self.audioEngine.connect(self.playerNode, to: mixer, format: mixer.outputFormat(forBus: 0))
+//                let file = try AVAudioFile(forReading: midiURL)
+//                let buffer = AVAudioPCMBuffer(pcmFormat: file.processingFormat, frameCapacity: AVAudioFrameCount(file.length))
+//                try file.read(into: buffer!)
+//                self.playerNode.scheduleBuffer(buffer!) {
+//                    self.playerNode.stop()
+//                }
 
                 self.midiPlayer = try AVMIDIPlayer.init(contentsOf: midiURL, soundBankURL: soundFontURL)
                 self.midiPlayer.prepareToPlay()
@@ -95,7 +122,32 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }
     }
     
-
+//    func startEngine() {
+//
+//        if self.audioEngine.isRunning {
+//            print("audio engine already started")
+//            return
+//        }
+//
+//        do {
+//            try self.audioEngine.start()
+//            print("audio engine started")
+//        } catch {
+//            print("oops \(error)")
+//            print("could not start audio engine")
+//        }
+//    }
+//
+//    func setSessionPlayback() {
+//        let audioSession = AVAudioSession.sharedInstance()
+//        do {
+//            try audioSession.setCategory(AVAudioSessionCategoryPlayback,
+//                                         with: AVAudioSessionCategoryOptions.mixWithOthers)
+//            try audioSession.setActive(true)
+//        } catch {
+//            print("couldn't set category \(error)")
+//        }
+//    }
     
     func highPassFilterAction() {
         
@@ -141,7 +193,22 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 
     //MARK: - On Click Methods
     @IBAction func onClickPlayButton(_ sender: Any) {
-
+//        if self.sequencer.isPlaying {
+//            self.sequencer.stop()
+//        }
+//        else {
+//            self.setSessionPlayback()
+//            self.startEngine()
+//            self.sequencer.prepareToPlay()
+//        }
+//        if self.playerNode.isPlaying {
+//            self.playerNode.stop()
+//        }
+//        else {
+//            self.setSessionPlayback()
+//            self.startEngine()
+//            self.playerNode.play()
+//        }
         if self.midiPlayer.isPlaying {
             self.midiPlayer.stop()
             self.enablePlayTimer(false)
